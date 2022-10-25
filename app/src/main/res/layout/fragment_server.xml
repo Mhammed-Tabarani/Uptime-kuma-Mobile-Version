@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".views.server.ServerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/serverback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:drawableRight="@drawable/arrow_back"
+                android:focusable="true"
+                app:layout_constraintHorizontal_bias="0.028"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/server_title"
+                style="@style/differente_size_title_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="ADM" />
+
+            <TextView
+                android:id="@+id/server_link"
+                style="@style/link_server_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="http://admtrafic.ma/" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/card_graph_recycler_server"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/card_graph_server" />
+
+                    <TextView
+                        android:id="@+id/status_verification_server_fragment"
+                        style="@style/without_margin_title_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:maxLines="1"
+                        android:text="@string/status_verification_server_fragment" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/isOnlineCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="30dp">
+
+                        <TextView
+                            android:id="@+id/isOnlineText"
+                            style="@style/status_2_server_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="qsd"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/grey"
+                app:cardCornerRadius="10dp">
+
+                <com.androidplot.xy.XYPlot
+                    android:id="@+id/graph_server_fragment"
+                    style="@style/APDefacto.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lineLabelTextSizeBottom="13dp"
+                    app:lineLabelTextSizeLeft="11dp">
+
+                </com.androidplot.xy.XYPlot>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_server_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    tools:listitem="@layout/dashbord_recylcer_item" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

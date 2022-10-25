@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.uptime.kuma.views.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_bienvenueFragment"
+            app:destination="@id/bienvenueFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienvenueFragment"
+        android:name="com.uptime.kuma.views.bienvenue.BienvenueFragment"
+        android:label="fragment_bienvenue"
+        tools:layout="@layout/fragment_bienvenue">
+        <action
+            android:id="@+id/action_bienvenueFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_anime"
+            app:exitAnim="@anim/exit_anime"
+            app:popEnterAnim="@anim/pop_enter_anime"
+            app:popExitAnim="@anim/pop_exit_anime" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.uptime.kuma.views.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginPlusFragment"
+            app:destination="@id/loginPlusFragment"
+            app:enterAnim="@anim/enter_anime"
+            app:exitAnim="@anim/exit_anime"
+            app:popEnterAnim="@anim/pop_enter_anime"
+            app:popExitAnim="@anim/pop_exit_anime" />
+    </fragment>
+    <fragment
+        android:id="@+id/serverFragment"
+        android:name="com.uptime.kuma.views.server.ServerFragment"
+        android:label="fragment_server"
+        tools:layout="@layout/fragment_server">
+        <argument
+            android:name="serverId"
+            android:defaultValue="1"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/apparenceReglageFragment"
+        android:name="com.uptime.kuma.views.apparence.ApparenceReglageFragment"
+        android:label="fragment_apparence_reglage"
+        tools:layout="@layout/fragment_apparence_reglage" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.uptime.kuma.views.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.uptime.kuma.views.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_serverFragment"
+            app:destination="@id/serverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPlusFragment"
+        android:name="com.uptime.kuma.views.loginPlus.LoginPlusFragment"
+        android:label="fragment_login_plus"
+        tools:layout="@layout/fragment_login_plus">
+        <action
+            android:id="@+id/action_loginPlusFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="socketUrl"
+            android:defaultValue="socket"
+            app:argType="string" />
+    </fragment>
+</navigation>

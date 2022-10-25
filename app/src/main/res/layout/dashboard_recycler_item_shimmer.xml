@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/grey"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@color/title_color_grey"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/dashbord_slug_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/title_color_grey"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_status"
+                android:layout_width="wrap_content"
+                android:layout_height="18sp"
+                android:layout_alignParentStart="true"
+                android:minWidth="65dp"
+                android:minHeight="23dp"
+                app:cardBackgroundColor="@color/title_color_grey"
+                app:cardCornerRadius="25dp">
+
+                <TextView
+                    android:id="@+id/dashbord_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/dashbord_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dashbord_servername_tv"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/title_color_grey"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/ic_baseline_timelapse_24" />
+
+                <TextView
+                    android:id="@+id/dashbord_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/title_color_grey"
+                    android:fontFamily="@font/roboto"
+                    android:text="Il ya 5 min"
+                    android:textColor="@color/title_color_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dashbord_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_color_grey"
+                android:fontFamily="@font/roboto_light"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                android:textColor="@color/title_color_grey"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
